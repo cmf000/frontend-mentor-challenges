@@ -1,6 +1,8 @@
 :root {
     box-sizing: border-box;
     font-family: Outfit, sans-serif;
+    font-size: 1em;
+    --image-size: 288px;
 }
 
 
@@ -26,29 +28,34 @@ body {
     border-radius: 20px;
     padding: 1em 1em 2.5em;
     height: auto;
-    width: auto;
-    line-height: 0;
+    width: calc(var(--image-size) + 2rem);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 .card img {
-    height: 288px;
-    width: 288px;
+    height: var(--image-size);
+    width: var(--image-size);
     border-radius: 10px;
 }
 
 .card-body {
     display: flex;
     justify-content: center;
-    width: 288px;
     height: auto;
+    width: var(--image-size);
     text-align: center;
     flex-wrap: wrap;
-    margin-top: 24px;
-    gap: 16px;
+    gap: 1em;
+}
+
+.card-body h1 p {
+    width: var(--image-size - 1.375em);
 }
 
 .card-body h1 {
-    width: 256px;
     font-size: 22px;
     font-weight: 700;
     color:hsl(218, 44%, 22%);
@@ -57,7 +64,6 @@ body {
 }
 
 .card-body p {
-    width: 256px;
     font-size: 15px;
     font-weight: 400;
     color:hsl(216, 15%, 48%);
